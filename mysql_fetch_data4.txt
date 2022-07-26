@@ -1,0 +1,61 @@
+exit();
+}
+
+$query = "SELECT Name, CountryCode FROM City ORDER by ID LIMIT 3";
+$result = $mysqli->query($query);
+
+/* numeric array */
+$row = $result->fetch_array(MYSQLI_NUM);
+printf ("%s (%s)\n", $row[0], $row[1]);
+
+/* associative array */
+$row = $result->fetch_array(MYSQLI_ASSOC);
+printf ("%s (%s)\n", $row["Name"], $row["CountryCode"]);
+
+/* associative and numeric array */
+$row = $result->fetch_array(MYSQLI_BOTH);
+printf ("%s (%s)\n", $row[0], $row["CountryCode"]);
+
+/* free result set */
+$result->free();
+
+/* close connection */
+$mysqli->close();
+?>
+Example #2 Procedural style
+
+<?php
+$link = mysqli_connect("localhost", "my_user", "my_password", "world");
+
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+$query = "SELECT Name, CountryCode FROM City ORDER by ID LIMIT 3";
+$result = mysqli_query($link, $query);
+
+/* numeric array */
+$row = mysqli_fetch_array($result, MYSQLI_NUM);
+printf ("%s (%s)\n", $row[0], $row[1]);
+
+/* associative array */
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+printf ("%s (%s)\n", $row["Name"], $row["CountryCode"]);
+
+/* associative and numeric array */
+$row = mysqli_fetch_array($result, MYSQLI_BOTH);
+printf ("%s (%s)\n", $row[0], $row["CountryCode"]);
+
+/* free result set */
+mysqli_free_result($result);
+
+/* close connection */
+mysqli_close($link);
+?>
+The above examples will output:
+
+Kabul (AFG)
+Qandahar (AFG)
+Herat (AFG)

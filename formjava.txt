@@ -1,0 +1,263 @@
+
+
+
+
+  <html><head><title>myTown</title><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+      
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkEmail(field, value){
+    bspForm = document.form1;
+    bspEmail = bspForm[field];
+    value= value.toString();
+    if (value.indexOf('@') == -1){
+       alert("E-Mail Address Is Invalid; Check Your Entry");
+       bspEmail.focus();
+       return false;}
+    else{
+       for (var n = 0; n < value.length; n++)
+       if (value.substring(n, n+1) == "@")
+           value= value.slice(n+1, value.length);
+       if (value.indexOf('.') == -1){
+           alert("E-Mail Address Is Invalid; Check Your Entry");
+           bspEmail.focus();
+           return false;}}
+}
+function checkExtension(){
+var bspForm = document.form1;
+if(bspForm["telephone"].value == "" &&
+   bspForm["extension_tel"].value != ""){
+   alert("Enter More Than Just the Extension");
+   bspForm["telephone"].focus();
+   return false;}
+if(bspForm["fax"].value == "" &&
+   bspForm["extension_fax"].value != ""){
+   alert("Enter More Than Just the Extension");
+   bspForm["fax"].focus();
+   return false;}
+}
+function checkExtensionOrg(){
+var bspForm = document.form1;
+if(bspForm["telephone_org"].value == "" &&
+   bspForm["extension_tel_org"].value != ""){
+   alert("Enter More Than Just the Extension");
+   bspForm["telephone_org"].focus();
+   return false;}
+if(bspForm["fax_org"].value == "" &&
+   bspForm["extension_fax_org"].value != ""){
+   alert("Enter More Than Just the Extension");
+   bspForm["fax_org"].focus();
+   return false;}
+}
+function checkExtensionAll(){
+    if (checkExtensionOrg()==false){return false;};
+    if (checkExtension()==false){return false;};
+}
+//-->
+</script>
+
+      
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkReqFields(){
+var bspForm = document.form1;
+if(bspForm["firstname"].value == ""){
+    alert("Enter your first name");
+    bspForm["firstname"].focus();
+    return false;}
+if(bspForm["lastname"].value == ""){
+    alert("Enter your last name");
+    bspForm["lastname"].focus();
+    return false;}
+if(bspForm["street"].value == ""){
+    alert("Enter the street");
+    bspForm["street"].focus();
+    return false;}
+if(bspForm["house_no"].value == ""){
+    alert("Enter the house number");
+    bspForm["house_no"].focus();
+    return false;}
+if(bspForm["city"].value == ""){
+    alert("Enter the Town");
+    bspForm["city"].focus();
+    return false;}
+if(bspForm["e_mail"].value == ""){
+    alert("Enter an E-Mail Address");
+    bspForm["e_mail"].focus();
+    return false;}
+}
+function checkForm(){
+    var bspForm = document.form1;
+    if (checkReqFields()==false){return false;};
+    if (checkExtension()==false){return false;};
+    if (checkEmail("e_mail", bspForm["e_mail"].value) == false){return false;}
+}
+//-->
+</script>
+
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" ><meta http-equiv="imagetoolbar" content="no"><script type="text/javascript" language="JavaScript" src="/sap/public/bsp/sap/htmlb/events.js?0008"></script><script type="text/javascript" language="JavaScript" src="/sap/public/bsp/sap/htmlb/event_dictionary.js?0008"></script><link id="urstyle" rel="stylesheet" type="text/css" href="/sap/public/bc/ur/Design2002/themes/sap_tradeshow/ur/ur_ie5.css?6.0.17.0.0"><script type="text/javascript" language="JavaScript">var popup_emptydoc="/sap/public/bsp/sap/htmlb/domainRelaxOff.htm?0008";var HTMLB_SECTION508 = false;</script><script type="text/javascript" language="JavaScript">var sapUrDomainRelaxing = {NONE:"NONE",MINIMAL:"MINIMAL",MAXIMAL:"MAXIMAL"};ur_system={doc:window.document ,mimepath:"/sap/public/bc/ur/Design2002/themes/sap_tradeshow/common/",stylepath:"/sap/public/bc/ur/Design2002/themes/sap_tradeshow/ur/",emptyhoverurl:"/sap/public/bsp/sap/htmlb/domainRelaxOff.htm?0008",is508:false,direction:"ltr",domainrelaxing:sapUrDomainRelaxing.NONE,browser_abbrev:"ie5",dateformat:1,firstdayofweek:0,ur_version:"6.0.17.0.0",css_version:"6.0.17.0.0"}</script><script type="text/javascript" language="JavaScript" src="/sap/public/bc/ur/Design2002/js/sapUrMapi_ie5.js?6.0.17.0.0"></script><script type="text/javascript" language="JavaScript" src="/sap/public/bc/ur/Design2002/js/popup_ie5.js?6.0.17.0.0"></script><script type="text/javascript" language="JavaScript" src="/sap/public/bc/ur/Design2002/js/languages/urMessageBundle_en.js?6.0.17.0.0"></script><script type="text/javascript" language="JavaScript" src="/sap/public/bsp/sap/htmlb/misc.js?0008"></script>
+        <style type="text/css">
+    .urBdyStd { font-family:verdana;}
+    .urTxtStd{font-family:verdana;}
+    .urGrpTtlBox {
+    background-color: #a3be59;
+    background-repeat: repeat-x;
+    border-color: #008800;
+    border-style: none none solid;
+    border-width: 0;
+    color: #000000;
+    font-family:verdana;
+    font-size:0.8em;
+    font-weight: bold;
+    height: 25px;
+    padding: 3px 5px 3px 11px;}
+
+    .urEdf2TxtEnbl{background-color: #FFFFFF;
+    border-color: #83838F;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    font-family: Verdana;
+    font-size:0.8em;
+    height: 4.2ex;
+    width:200px;
+    padding: 0 2px;
+    vertical-align: text-bottom;}
+
+
+
+    urDdlWhl, .urDdlWhl1 {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: verdana;
+    font-size: 0.8em;
+    width:200px;
+}
+zgv2_chg_bupa
+
+.urLblStd1{font-family:verdana;}
+
+.urGrpBdyBox urScrl{}
+
+    </style>
+    <link href="../Zgvt_includes/css/tooltipster.css" rel="stylesheet" type="text/css" />
+    <script src="../Zgvt_includes/js/jquery.min.js"></script>
+    <script src="../Zgvt_includes/js/jquery.tooltipster.min.js"></script>
+    <script src="../Zgvt_includes/js/application.js"></script>
+    <script>
+      $(function(){
+          getTooltips('zgv2_CHG_BUPA');
+      });
+    </script>
+    </head><body class="urBdyStd" scroll="AUTO" style="margin-left:2;margin-right:2;margin-top:2;margin-bottom:2"><table cellspacing="0" cellpadding="0" border="0" width="100%"><tr><td width="100%">
+      
+
+<table cellspacing="2" cellpadding="0" id="htmlb_gridlayout_1" class="urFontStd" ct="GridLayout" width="100%" border="0"><tbody><tr><td></td><td></td></tr></table>
+
+      <input disabled type="hidden" id="htmlb_first_form_id" name="htmlb_first_form_id" value="form1"><form id="form1" name="form1" method="POST" autocomplete="off"><input type="hidden" name="htmlbScrollX"><input type="hidden" name="htmlbScrollY"><input type="hidden" name="htmlbevt_ty"><input type="hidden" name="htmlbdoc_id" value=""><input type="hidden" name="htmlbevt_frm" id="htmlbevt_frm" value="form1"><input type="hidden" name="htmlbevt_oid"><input type="hidden" name="htmlbevt_id"><input type="hidden" name="htmlbevt_cnt"><input type="hidden" name="htmlbevt_par1"><input type="hidden" name="htmlbevt_par2"><input type="hidden" name="htmlbevt_par3"><input type="hidden" name="htmlbevt_par4"><input type="hidden" name="htmlbevt_par5"><input type="hidden" name="htmlbevt_par6"><input type="hidden" name="htmlbevt_par7"><input type="hidden" name="htmlbevt_par8"><input type="hidden" name="htmlbevt_par9"><input type="hidden" name="onInputProcessing" value="htmlb"><input type="hidden" name="form1_complete" id="form1_complete" code="OK"><input type="hidden" name="sap-htmlb-design" id="sap-htmlb-design" value="">
+        
+
+
+
+
+
+
+        <p></p>
+        
+        <input type="hidden" id="bupa" ct="InputField" name="bupa" value="6000631692">
+        
+
+
+
+
+<table cellspacing="0" cellpadding="0" border="0" id="group_person" ct="Group" class="urGrpWhlBox" style="width:1200px;"><tbody><tr><td class="urGrpTtlBox urScrl"><span style="white-space:nowrap;">Fill&#x20;all&#x20;fields&#x20;with&#x20;ASTERISK&#x20;&#x28;&#x2a;&#x29;&#x20;so&#x20;that&#x20;you&#x20;can&#x20;proceed.</span></td></tr><tr><td valign="top" height="100%" class="urGrpBdyBox urScrl"><div class="urGrpBdyBoxPd">
+    <table cellspacing="5" cellpadding="0" id="htmlb_gridlayout_2" class="urFontStd" ct="GridLayout" border="0"><tbody><tr><td valign="TOP" colspan="0" style="width:150;">
+        <label onclick="sapUrMapi_Label_focus('title_key_label', 'title_key',event);" id="title_key_label" for="title_key" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Form&#x20;of&#x20;Address</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <select class="urDdlWhl1 urV" id="title_key" ct="DropDownListBox" name="title_key"><option value="0001">Ms.<option value="0002" selected>Mr.<option value="0005">Mrs.<option value="0006">Cde.<option value="0007">Hon.<option value="0008">Dr.<option value="0009">Rev.</select>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('firstname_label', 'firstname',event);" id="firstname_label" for="firstname" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">First&#x20;Name</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="firstname-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urEdf2TxtRo urV" autocomplete="off" size="40" maxlength="40" id="firstname" ct="InputField" name="firstname" st="r" tp="STRING" readonly value="DONALD" onchange="sapUrMapi_InputField_change('firstname',event);" onblur="sapUrMapi_InputField_Blur('firstname',event)" onkeydown="sapUrMapi_InputField_keydown('firstname',event)" onkeyup="sapUrMapi_InputField_KeyUp('firstname',event)" onfocus="sapUrMapi_InputField_focus('firstname',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('lastname_label', 'lastname',event);" id="lastname_label" for="lastname" class="urLblStd1 urVt" title="Enter&#x20;Last&#x20;Name" style="white-space:nowrap;"><span class="urLblPadding">Last&#x20;Name</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="lastname-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urEdf2TxtRo urV" autocomplete="off" size="40" maxlength="40" id="lastname" ct="InputField" name="lastname" st="r" tp="STRING" readonly value="SHAMBARE" onchange="sapUrMapi_InputField_change('lastname',event);" onblur="sapUrMapi_InputField_Blur('lastname',event)" onkeydown="sapUrMapi_InputField_keydown('lastname',event)" onkeyup="sapUrMapi_InputField_KeyUp('lastname',event)" onfocus="sapUrMapi_InputField_focus('lastname',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('idnum_label', 'idnum',event);" id="idnum_label" for="idnum" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">ID&#x20;Number</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="idnum-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urEdf2TxtRo urV" autocomplete="off" size="12" maxlength="12" id="idnum" ct="InputField" name="idnum" st="r" tp="STRING" readonly value="63792546Y15" onchange="sapUrMapi_InputField_change('idnum',event);" onblur="sapUrMapi_InputField_Blur('idnum',event)" onkeydown="sapUrMapi_InputField_keydown('idnum',event)" onkeyup="sapUrMapi_InputField_KeyUp('idnum',event)" onfocus="sapUrMapi_InputField_focus('idnum',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('house_no_label', 'house_no',event);" id="house_no_label" for="house_no" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">House&#x20;Number</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="house_no-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="4" maxlength="10" id="house_no" ct="InputField" name="house_no" st="" tp="STRING" value="14&#x20;&amp;&#x20;15" onchange="sapUrMapi_InputField_change('house_no',event);" onblur="sapUrMapi_InputField_Blur('house_no',event)" onkeydown="sapUrMapi_InputField_keydown('house_no',event)" onkeyup="sapUrMapi_InputField_KeyUp('house_no',event)" onfocus="sapUrMapi_InputField_focus('house_no',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('street_label', 'street',event);" id="street_label" for="street" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Street</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="street-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="40" maxlength="60" id="street" ct="InputField" name="street" st="" tp="STRING" value="NZVIMBO&#x20;GROWTHPOINT" onchange="sapUrMapi_InputField_change('street',event);" onblur="sapUrMapi_InputField_Blur('street',event)" onkeydown="sapUrMapi_InputField_keydown('street',event)" onkeyup="sapUrMapi_InputField_KeyUp('street',event)" onfocus="sapUrMapi_InputField_focus('street',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('postll_cod1_label', 'postl_cod1',event);" id="postll_cod1_label" for="postl_cod1" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Postal&#x20;Code</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="postl_cod1-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="5" maxlength="10" id="postl_cod1" ct="InputField" name="postl_cod1" st="" tp="STRING" value="&#x2b;263" onchange="sapUrMapi_InputField_change('postl_cod1',event);" onblur="sapUrMapi_InputField_Blur('postl_cod1',event)" onkeydown="sapUrMapi_InputField_keydown('postl_cod1',event)" onkeyup="sapUrMapi_InputField_KeyUp('postl_cod1',event)" onfocus="sapUrMapi_InputField_focus('postl_cod1',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('city_label', 'city',event);" id="city_label" for="city" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">City</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="city-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="40" maxlength="40" id="city" ct="InputField" name="city" st="" tp="STRING" value="CHIWESHE" onchange="sapUrMapi_InputField_change('city',event);" onblur="sapUrMapi_InputField_Blur('city',event)" onkeydown="sapUrMapi_InputField_keydown('city',event)" onkeyup="sapUrMapi_InputField_KeyUp('city',event)" onfocus="sapUrMapi_InputField_focus('city',event)"><span class="urAr"></span></span>
+
+
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('country_label', 'country',event);" id="country_label" for="country" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Country</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <select class="urDdlWhl1 urV" id="country" ct="DropDownListBox" name="country" onchange="return htmlbSL(this,15,'country:onCountrySelect')"><option value="TF">French&#x20;S.Territ<option value="AF">Afghanistan<option value="AL">Albania<option value="DZ">Algeria<option value="UM">Minor&#x20;Outl.Isl.<option value="AS">Samoa,&#x20;America<option value="VI">Amer.Virgin&#x20;Is.<option value="AD">Andorran<option value="AO">Angola<option value="AI">Anguilla<option value="AQ">Antarctica<option value="AG">Antigua&#x2f;Barbuda<option value="AR">Argentina<option value="AM">Armenia<option value="AW">Aruba<option value="AU">Australia<option value="AT">Austria<option value="AZ">Azerbaijan<option value="BS">Bahamas<option value="BH">Bahrain<option value="BD">Bangladesh<option value="BB">Barbados<option value="BY">Belarus<option value="BE">Belgium<option value="BZ">Belize<option value="BJ">Benin<option value="BM">Bermuda<option value="BT">Bhutan<option value="BL">Blue<option value="BO">Bolivia<option value="BA">Bosnia-Herz.<option value="BW">Botswana<option value="BV">Bouvet&#x20;Islands<option value="BR">Brazil<option value="IO">Brit.Ind.Oc.Ter<option value="VG">Brit.Virgin&#x20;Is.<option value="BN">Brunei&#x20;Daruss.<option value="BG">Bulgaria<option value="BF">Burkina&#x20;Faso<option value="MM">Burma<option value="BI">Burundi<option value="KH">Cambodia<option value="CM">Cameroon<option value="CA">Canada<option value="CV">Cape&#x20;Verde<option value="KY">Cayman&#x20;Islands<option value="CF">CAR<option value="TD">Chad<option value="CL">Chile<option value="CN">China<option value="CX">Christmas&#x20;Islnd<option value="CC">Coconut&#x20;Islands<option value="CO">Colombia<option value="KM">Comoros<option value="CK">Cook&#x20;Islands<option value="CR">Costa&#x20;Rica<option value="CI">Cote&#x20;d&#x27;Ivoire<option value="HR">Croatia<option value="CU">Cuba<option value="CY">Cyprus<option value="CZ">Czech&#x20;Republic<option value="CD">Dem.&#x20;Rep.&#x20;Congo<option value="DK">Denmark<option value="DJ">Djibouti<option value="DM">Dominica<option value="DO">Dominican&#x20;Rep.<option value="AN">Dutch&#x20;Antilles<option value="TL">East&#x20;Timor<option value="TP">East&#x20;Timor<option value="EC">Ecuador<option value="EG">Egypt<option value="SV">El&#x20;Salvador<option value="GQ">Equatorial&#x20;Guin<option value="ER">Eritrea<option value="EE">Estonia<option value="ET">Ethiopia<option value="EU">European&#x20;Union<option value="FK">Falkland&#x20;Islnds<option value="FO">Faroe&#x20;Islands<option value="FJ">Fiji<option value="FI">Finland<option value="FR">France<option value="GF">French&#x20;Guayana<option value="PF">Frenc.Polynesia<option value="GA">Gabon<option value="GM">Gambia<option value="GE">Georgia<option value="DE">Germany<option value="GH">Ghana<option value="GI">Gibraltar<option value="GR">Greece<option value="GL">Greenland<option value="GD">Grenada<option value="GP">Guadeloupe<option value="GU">Guam<option value="GT">Guatemala<option value="GN">Guinea<option value="GW">Guinea-Bissau<option value="GY">Guyana<option value="HT">Haiti<option value="HM">Heard&#x2f;McDon.Isl<option value="HN">Honduras<option value="HK">Hong&#x20;Kong<option value="HU">Hungary<option value="IS">Iceland<option value="IN">India<option value="ID">Indonesia<option value="IR">Iran<option value="IQ">Iraq<option value="IE">Ireland<option value="IL">Israel<option value="IT">Italy<option value="JM">Jamaica<option value="JP">Japan<option value="JO">Jordan<option value="KZ">Kazakhstan<option value="KE">Kenya<option value="KI">Kiribati<option value="KW">Kuwait<option value="KG">Kyrgyzstan<option value="LA">Laos<option value="LV">Latvia<option value="LB">Lebanon<option value="LS">Lesotho<option value="LR">Liberia<option value="LY">Libya<option value="LI">Liechtenstein<option value="LT">Lithuania<option value="LU">Luxembourg<option value="MO">Macau<option value="MK">Macedonia<option value="MG">Madagascar<option value="MW">Malawi<option value="MY">Malaysia<option value="MV">Maldives<option value="ML">Mali<option value="MT">Malta<option value="MH">Marshall&#x20;Islnds<option value="MQ">Martinique<option value="MR">Mauretania<option value="MU">Mauritius<option value="YT">Mayotte<option value="MX">Mexico<option value="FM">Micronesia<option value="MD">Moldova<option value="MC">Monaco<option value="MN">Mongolia<option value="MS">Montserrat<option value="MA">Morocco<option value="MZ">Mozambique<option value="NA">Namibia<option value="NT">NATO<option value="NR">Nauru<option value="NP">Nepal<option value="NL">Netherlands<option value="NC">New&#x20;Caledonia<option value="NZ">New&#x20;Zealand<option value="NI">Nicaragua<option value="NE">Niger<option value="NG">Nigeria<option value="NU">Niue<option value="NF">Norfolk&#x20;Islands<option value="KP">North&#x20;Korea<option value="MP">N.Mariana&#x20;Islnd<option value="NO">Norway<option value="OM">Oman<option value="OR">Orange<option value="PK">Pakistan<option value="PW">Palau<option value="PS">Palestine<option value="PA">Panama<option value="PG">Pap.&#x20;New&#x20;Guinea<option value="PY">Paraguay<option value="PE">Peru<option value="PH">Philippines<option value="PN">Pitcairn&#x20;Islnds<option value="PL">Poland<option value="PT">Portugal<option value="PR">Puerto&#x20;Rico<option value="QA">Qatar<option value="CG">Rep.of&#x20;Congo<option value="RE">Reunion<option value="RO">Romania<option value="RU">Russian&#x20;Fed.<option value="RW">Rwanda<option value="SH">Saint&#x20;Helena<option value="KN">St&#x20;Kitts&amp;Nevis<option value="WS">Samoa<option value="SM">San&#x20;Marino<option value="ST">S.Tome,Principe<option value="SA">Saudi&#x20;Arabia<option value="SN">Senegal<option value="CS">Serbia&#x2f;Monten.<option value="SC">Seychelles<option value="SL">Sierra&#x20;Leone<option value="SG">Singapore<option value="SK">Slovakia<option value="SI">Slovenia<option value="SB">Solomon&#x20;Islands<option value="SO">Somalia<option value="ZA">South&#x20;Africa<option value="GS">S.&#x20;Sandwich&#x20;Ins<option value="KR">South&#x20;Korea<option value="ES">Spain<option value="LK">Sri&#x20;Lanka<option value="LC">St.&#x20;Lucia<option value="PM">St.Pier,Miquel.<option value="VC">St.&#x20;Vincent<option value="SD">Sudan<option value="SR">Suriname<option value="SJ">Svalbard<option value="SZ">Swaziland<option value="SE">Sweden<option value="CH">Switzerland<option value="SY">Syria<option value="TW">Taiwan<option value="TJ">Tajikistan<option value="TZ">Tanzania<option value="TH">Thailand<option value="TG">Togo<option value="TK">Tokelau&#x20;Islands<option value="TO">Tonga<option value="TT">Trinidad,Tobago<option value="TN">Tunisia<option value="TR">Turkey<option value="TM">Turkmenistan<option value="TC">Turksh&#x20;Caicosin<option value="TV">Tuvalu<option value="UG">Uganda<option value="UA">Ukraine<option value="AE">Utd.Arab&#x20;Emir.<option value="GB">United&#x20;Kingdom<option value="UN">United&#x20;Nations<option value="UY">Uruguay<option value="US">USA<option value="UZ">Uzbekistan<option value="VU">Vanuatu<option value="VA">Vatican&#x20;City<option value="VE">Venezuela<option value="VN">Vietnam<option value="WF">Wallis,Futuna<option value="EH">West&#x20;Sahara<option value="YE">Yemen<option value="ZM">Zambia<option value="ZW" selected>Zimbabwe</select>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('region_label', 'region',event);" id="region_label" for="region" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Province</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <select class="urDdlWhl1 urV" id="region" ct="DropDownListBox" name="region"><option value="Z1">Harare<option value="Z10">Bulawayo<option value="Z2">Manicaland<option value="Z3" selected>Mashonaland&#x20;Central<option value="Z4">Mashonaland&#x20;East<option value="Z5">Mashonaland&#x20;West<option value="Z6">Masvingo<option value="Z7">Matabeleland&#x20;North<option value="Z8">Matabeleland&#x20;South<option value="Z9">Midlands</select>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('telephone_label', 'telephone',event);" id="telephone_label" for="telephone" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Mobile&#x20;Number</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="telephone-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="30" maxlength="30" id="telephone" ct="InputField" name="telephone" st="" tp="STRING" value="0783015903" onchange="sapUrMapi_InputField_change('telephone',event);" onblur="sapUrMapi_InputField_Blur('telephone',event)" onkeydown="sapUrMapi_InputField_keydown('telephone',event)" onkeyup="sapUrMapi_InputField_KeyUp('telephone',event)" onfocus="sapUrMapi_InputField_focus('telephone',event)"><span class="urAr"></span></span>
+        <!--<span ct="TextView" class="urTxtStd urVt1" style="white-space:nowrap;">-</span>
+        <span id="extension_tel-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="10" maxlength="10" id="extension_tel" ct="InputField" name="extension_tel" st="" tp="STRING" value="" onchange="sapUrMapi_InputField_change('extension_tel',event);" onblur="sapUrMapi_InputField_Blur('extension_tel',event)" onkeydown="sapUrMapi_InputField_keydown('extension_tel',event)" onkeyup="sapUrMapi_InputField_KeyUp('extension_tel',event)" onfocus="sapUrMapi_InputField_focus('extension_tel',event)"><span class="urAr"></span></span>-->
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('fax_label', 'fax',event);" id="fax_label" for="fax" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Fax&#x2f;Extension</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="fax-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="30" maxlength="30" id="fax" ct="InputField" name="fax" st="" tp="STRING" value="" onchange="sapUrMapi_InputField_change('fax',event);" onblur="sapUrMapi_InputField_Blur('fax',event)" onkeydown="sapUrMapi_InputField_keydown('fax',event)" onkeyup="sapUrMapi_InputField_KeyUp('fax',event)" onfocus="sapUrMapi_InputField_focus('fax',event)"><span class="urAr"></span></span>
+        <span ct="TextView" class="urTxtStd urVt1" style="white-space:nowrap;">-</span>
+        <span id="extension_fax-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="10" maxlength="10" id="extension_fax" ct="InputField" name="extension_fax" st="" tp="STRING" value="" onchange="sapUrMapi_InputField_change('extension_fax',event);" onblur="sapUrMapi_InputField_Blur('extension_fax',event)" onkeydown="sapUrMapi_InputField_keydown('extension_fax',event)" onkeyup="sapUrMapi_InputField_KeyUp('extension_fax',event)" onfocus="sapUrMapi_InputField_focus('extension_fax',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('e_mail_label', 'e_mail',event);" id="e_mail_label" for="e_mail" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">E-Mail&#x20;Address</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <span id="e_mail-r" class="urEdf2Whl"><input type="Text" class="urEdf2TxtEnbl urV" autocomplete="off" size="40" maxlength="241" id="e_mail" ct="InputField" name="e_mail" st="" tp="STRING" value="dshambare&#x40;yahoo.com" onchange="sapUrMapi_InputField_change('e_mail',event);" onblur="sapUrMapi_InputField_Blur('e_mail',event)" onkeydown="sapUrMapi_InputField_keydown('e_mail',event)" onkeyup="sapUrMapi_InputField_KeyUp('e_mail',event)" onfocus="sapUrMapi_InputField_focus('e_mail',event)"><span class="urAr"></span></span>
+      </td></tr><tr><td valign="TOP" colspan="0">
+        <label onclick="sapUrMapi_Label_focus('language_label', 'language',event);" id="language_label" for="language" class="urLblStd1 urVt" style="white-space:nowrap;"><span class="urLblPadding">Language</span><span class="urLblReq">&nbsp;*</span></label>
+      </td><td valign="TOP" colspan="0">
+        <select class="urDdlWhl1 urV" id="language" ct="DropDownListBox" name="language"><option value="AF">Afrikaans<option value="AR">Arabic<option value="BG">Bulgarian<option value="CA">Catalan<option value="ZH">Chinese<option value="ZF">Chinese&#x20;trad.<option value="HR">Croatian<option value="Z1">Customer&#x20;reserve<option value="CS">Czech<option value="DA">Danish<option value="NL">Dutch<option value="EN" selected>English<option value="ET">Estonian<option value="FI">Finnish<option value="FR">French<option value="DE">German<option value="EL">Greek<option value="HE">Hebrew<option value="HU">Hungarian<option value="IS">Icelandic<option value="ID">Indonesian<option value="IT">Italian<option value="JA">Japanese<option value="KO">Korean<option value="LV">Latvian<option value="LT">Lithuanian<option value="MS">Malay<option value="NO">Norwegian<option value="PL">Polish<option value="PT">Portuguese<option value="RO">Romanian<option value="RU">Russian<option value="SR">Serbian<option value="SH">Serbian&#x20;&#x28;Latin&#x29;<option value="SK">Slovak<option value="SL">Slovenian<option value="ES">Spanish<option value="SV">Swedish<option value="TH">Thai<option value="TR">Turkish<option value="UK">Ukrainian</select>
+      </td></tr></table>
+  </div></td></tr></table>
+
+        
+
+
+
+<table cellspacing="5" cellpadding="0" id="htmlb_gridlayout_3" class="urFontStd" ct="GridLayout" border="0"><tbody><tr><td valign="TOP" colspan="0">
+    <span ct="TextView" class="urTxtStd urVt1" style="white-space:nowrap;">Fields&#x20;Marked&#x20;with&#x20;&#x2a;&#x20;Must&#x20;Be&#x20;filled.</span>
+  </td></tr><tr><td valign="TOP" colspan="0">
+
+    <a href="javascript:void(0);" onclick="if(!sapUrMapi_Button_checkClick('submit',event)){return true;};htmlbEF('htmlbevent.returnValue\x3dfalse\x3bif\x28checkForm\x28\x29\x3d\x3dfalse\x29\x7bhtmlbevent.cancelSubmit\x3dtrue\x3b\x7d');return htmlbEL(this,2,'submit:onSubmit');" onkeypress="if(!sapUrMapi_Button_checkClick('submit',event)){return true;};htmlbEF('htmlbevent.returnValue\x3dfalse\x3bif\x28checkForm\x28\x29\x3d\x3dfalse\x29\x7bhtmlbevent.cancelSubmit\x3dtrue\x3b\x7d');return htmlbEL(this,2,'submit:onSubmit');" class="urBtnStd1 urV" id="submit" ct="Button" style="white-space:nowrap;"><span class="urBtnPadding">Submit</span></a>
+
+    &nbsp;
+    <a href="javascript:void(0);" onclick="if(!sapUrMapi_Button_checkClick('reset',event)){return true;};return htmlbSL(this,2,'reset:onReset')" onkeypress="if(!sapUrMapi_Button_checkClick('reset',event)){return true;};return htmlbSL(this,2,'reset:onReset')" class="urBtnStd1 urV" id="reset" ct="Button" style="white-space:nowrap;"><span class="urBtnPadding">Clear&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;</span></a>
+
+    &nbsp;
+    <a href="javascript:void(0);" onclick="if(!sapUrMapi_Button_checkClick('cancel',event)){return true;};htmlbEF('htmlbevent.returnValue\x3dfalse\x3btop.close\x28\x29');return htmlbEventCO(this,'click','htmlb:button:click:null','form1','cancel','',0);" onkeypress="if(!sapUrMapi_Button_checkClick('cancel',event)){return true;};htmlbEF('htmlbevent.returnValue\x3dfalse\x3btop.close\x28\x29');return htmlbEventCO(this,'click','htmlb:button:click:null','form1','cancel','',0);" class="urBtnStd1 urV" id="cancel" ct="Button" style="white-space:nowrap;"><span class="urBtnPadding">Close</span></a>
+  </td></tr></table>
+
+      </form>
+    <!--060613 -->
+<script language="JavaScript">
+function sapOnResize(){;}window.onresize=sapOnResize;
+</script><!--060613 --><div class=urFocTop id=ur-topfocus></div><div class=urFocBtm id=ur-bottomfocus></div><div class=urFocLft id=ur-leftfocus></div><div class=urFocRgt id=ur-rightfocus></div><div class=urFocEdg id=ur-edge1focus></div><div class=urFocEdg id=ur-edge2focus></div><div class=urFocEdg id=ur-edge3focus></div><div class=urFocEdg id=ur-edge4focus></div><script defer>sapUrMapi_Focus_RegisterCreate('null');</script><script language="JavaScript">sapUrMapi_initLinkStatus();</script></td></tr></table></body></html>
+
+<script type="text/javascript" language="JavaScript" id="SEC_SESSTOKEN" value="LZtiKxg-EDhcuwXYX6MLxg=="   src="/sap/public/bc/ur/sap_secu.js"></script>

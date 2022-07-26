@@ -1,0 +1,4 @@
+$sql = "SELECT id FROM games LIMIT 1";  // Select ONLY one, instead of all
+$result = $db->query($sql);
+$row = $result->fetch_assoc();
+echo 'Game ID: '.$row['id'];
